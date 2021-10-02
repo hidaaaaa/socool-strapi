@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "community_posts",
+  "info": {
+    "name": "Community Post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "idCommunity": {
+      "type": "string"
+    },
+    "listImages": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "text"
+    },
+    "likes": {
+      "type": "biginteger"
+    },
+    "plays": {
+      "type": "biginteger"
+    },
+    "comments": {
+      "type": "biginteger"
+    }
+  }
+}
