@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communities",
+  "info": {
+    "name": "Community",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "communityType": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "logoUrl": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "coverUrl": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "adminId": {
+      "type": "string"
+    },
+    "totalMember": {
+      "type": "biginteger"
+    },
+    "videos": {
+      "type": "biginteger"
+    },
+    "posts": {
+      "type": "biginteger"
+    },
+    "play": {
+      "type": "biginteger"
+    },
+    "like": {
+      "type": "biginteger"
+    },
+    "comments": {
+      "type": "biginteger"
+    }
+  }
+}
